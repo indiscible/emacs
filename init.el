@@ -37,6 +37,7 @@
 
 ;; compile stuff
 (global-set-key (kbd "<C-return>") 'recompile)
-
+(global-set-key (kbd "<C-f12>") 'next-error)
+(global-set-key (kbd "<C-shift-f12>") 'next-error)
 ;; other
 (global-set-key (kbd "C-c g") 'magit-status)
