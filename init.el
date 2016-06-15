@@ -42,15 +42,14 @@
 ;; other
 (global-set-key (kbd "C-c g") 'magit-status)
 
-(require 'setup-helm)
 (setq
  helm-gtags-ignore-case t
  helm-gtags-auto-update t
  helm-gtags-use-input-at-cursor t
  helmm-gtags-pulse-at-cursor t
  helm-gtags-prefix-key "\C-cg"
- helm-gtags-suggested-key-mapping t
- )
+ helm-gtags-suggested-key-mapping t)
+
 (require 'helm-gtags)
 (add-hook 'dired-mode-hook 'helm-gtags-mode)
 (add-hook 'eshell-mode-hook 'helm-gtags-mode)
@@ -64,3 +63,5 @@
 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+(load "~/gui/kdb.el")
